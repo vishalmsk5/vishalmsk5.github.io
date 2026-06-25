@@ -218,7 +218,7 @@ Your calculations remain private.
 
 ---
 
-# ❤️ Made for India
+# ❤️ Made for World
 
 BHIMR Universal Calculator is proudly designed to simplify everyday calculations for millions of users.
 
