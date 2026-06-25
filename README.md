@@ -272,7 +272,7 @@ Your support motivates us to build even better tools.
 
 # 📱 Google Play
 
-## Download Now
+## <a href="[https://www.w3schools.com](https://play.google.com/store/apps/details?id=com.bhimcalculator.app)">BHIMR Universal Calculator</a>Download Now
 
 https://play.google.com/store/apps/details?id=com.bhimcalculator.app
 
