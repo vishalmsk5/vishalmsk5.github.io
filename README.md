@@ -272,7 +272,7 @@ Your support motivates us to build even better tools.
 
 # 📱 Google Play
 
-## <a href="[https://www.w3schools.com](https://play.google.com/store/apps/details?id=com.bhimcalculator.app)">BHIMR Universal Calculator</a>Download Now
+## 📱 Open the Google Play Store and search BHIMR Universal Calculator to download multilingual smart calculator.
 
 https://play.google.com/store/apps/details?id=com.bhimcalculator.app
 
