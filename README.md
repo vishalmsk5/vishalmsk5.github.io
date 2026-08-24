@@ -1,6 +1,6 @@
-# Soham Technologies — Android Apps Portfolio
+# Vishal Creation— Android Apps Portfolio
 
-Welcome to the official repository for Soham Technologies apps. We build useful productivity tools and entertaining games for Android.
+Welcome to the official repository for Vishal Creations apps. We build useful productivity tools and entertaining games for Android.
 
 ## 🚀 Our Android Apps
 
@@ -13,4 +13,4 @@ Welcome to the official repository for Soham Technologies apps. We build useful 
 * **Google Play:** [Get it on Google Play](https://play.google.com/store/apps/details?id=com.bhimcalculator.app)
 
 ---
-© Soham Technologies. All rights reserved.
+© Vishal Creation. All rights reserved.
