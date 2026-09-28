@@ -19,6 +19,7 @@
   --accent-cyan:#06b6d4;
   --accent-violet:#a855f7;
   --accent-gold:#fbbf24;
+  --accent-pinterest:#e60023;
   
   --ink:#f8fafc;
   --muted:#94a3b8;
@@ -162,34 +163,23 @@ h1 .glow-word{
 .btn-primary:hover{ box-shadow:0 6px 20px rgba(168,85,247,0.4); transform:translateY(-2px); }
 .btn-primary:active{ transform:translateY(0); }
 
+/* Pinterest Specific Button */
+.btn-pinterest{
+  background:linear-gradient(135deg, #e60023, #bd081c); color:#fff;
+  box-shadow:0 4px 15px rgba(230,0,35,0.3); width:100%;
+}
+.btn-pinterest:hover{ box-shadow:0 6px 20px rgba(230,0,35,0.5); transform:translateY(-2px); }
+
 .folder-grid{ display:grid; grid-template-columns:1fr 1fr; gap:24px; }
 .folder-card{
   border-radius:24px; padding:30px 24px; border:1px solid var(--glass-border);
-  background:var(--glass-bg); backdrop-filter:blur(12px); cursor:pointer; text-align:center;
-  transition:all .25s ease;
+  background:var(--glass-bg); backdrop-filter:blur(12px); text-align:center;
+  transition:all .25s ease; display:flex; flex-direction:column; justify-content:space-between;
 }
-.folder-card:hover{ transform:translateY(-6px); border-color:var(--accent-cyan); box-shadow:0 12px 30px rgba(6,182,212,0.2); }
+.folder-card:hover{ transform:translateY(-6px); border-color:var(--accent-pinterest); box-shadow:0 12px 30px rgba(230,0,35,0.2); }
 .folder-icon{ font-size:52px; margin-bottom:12px; }
 .folder-title{ font-family:'Baloo 2', cursive; font-size:24px; font-weight:700; margin-bottom:6px; color:#fff; }
-.folder-count{ font-size:13.5px; color:var(--accent-cyan); font-weight:600; }
-
-.gallery-wrapper{ display:none; }
-.gallery-header{ display:flex; align-items:center; justify-content:space-between; margin-bottom:24px; }
-.back-btn{
-  background:rgba(255,255,255,0.06); border:1px solid var(--line); color:var(--ink);
-  padding:8px 20px; border-radius:100px; font-family:'Baloo 2', cursive; font-size:15px; cursor:pointer;
-  display:inline-flex; align-items:center; gap:8px; transition:0.25s;
-}
-.back-btn:hover{ background:var(--accent-blue); border-color:transparent; color:#fff; box-shadow:0 0 15px rgba(59,130,246,0.4); }
-
-.photo-grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(220px, 1fr)); gap:20px; }
-.photo-card{
-  border-radius:18px; overflow:hidden; border:1px solid var(--glass-border);
-  background:rgba(0,0,0,0.4); transition:0.25s ease; position:relative; display:flex; flex-direction:column;
-}
-.photo-card:hover{ transform:scale(1.03); border-color:var(--accent-cyan); box-shadow:0 10px 25px rgba(0,0,0,0.6); }
-.photo-card img{ width:100%; height:220px; object-fit:cover; display:block; }
-.photo-card .photo-info{ padding:14px; text-align:center; font-size:13.5px; font-weight:700; color:#fff; background:rgba(17,21,40,0.85); }
+.folder-desc{ font-size:13.5px; color:var(--muted); margin-bottom:18px; }
 
 .privacy-card{
   border-radius:24px; padding:32px; border:1px solid var(--line);
@@ -206,8 +196,6 @@ footer{
 
 @media (max-width:768px){
   .apps-grid, .folder-grid{ grid-template-columns:1fr; }
-  .photo-grid{ grid-template-columns:repeat(auto-fill, minmax(150px, 1fr)); }
-  .photo-card img{ height:160px; }
   nav{ flex-direction:column; gap:16px; text-align:center; }
 }
 </style>
@@ -246,6 +234,7 @@ footer{
     <button class="cat-btn" onclick="switchTab('photos', this)">📸 HD Photos & Wallpapers</button>
   </div>
 
+  <!-- Tab 1: All Creation -->
   <div id="all-tab" class="tab-content active">
     <section style="margin-bottom: 40px;">
       <div class="section-head">
@@ -300,23 +289,24 @@ footer{
         </div>
 
         <!-- HD Photo Preview Card -->
-        <div class="app-card" style="border-color: rgba(6,182,212,0.4);">
+        <div class="app-card" style="border-color: rgba(230,0,35,0.4);">
           <div>
             <div class="app-icon">🖼️</div>
-            <div class="app-title">HD Devotional Wallpapers</div>
-            <p class="app-desc">High-resolution Ganpati and Hanuman devotional photography collections for smartphones and tablets.</p>
+            <div class="app-title">Pinterest HD Wallpapers</div>
+            <p class="app-desc">Explore 4K & Ultra HD devotional photo galleries on Pinterest created for smartphones and tablets.</p>
             <div class="badges">
-              <span class="badge">📸 Ultra HD</span>
+              <span class="badge">📌 Pinterest Boards</span>
               <span class="badge">🌺 Devotional</span>
               <span class="badge">✨ Free Gallery</span>
             </div>
           </div>
-          <button class="btn btn-primary" style="background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));" onclick="switchToPhotosTab()">📷 Browse HD Photo Gallery</button>
+          <button class="btn btn-pinterest" onclick="switchToPhotosTab()">📷 Browse Pinterest Boards →</button>
         </div>
       </div>
     </section>
   </div>
 
+  <!-- Tab 2: Games -->
   <div id="games-tab" class="tab-content">
     <section style="margin-bottom: 40px;">
       <div class="section-head">
@@ -325,7 +315,6 @@ footer{
       </div>
       
       <div class="apps-grid">
-        <!-- Game 1: Block World Blast -->
         <div class="app-card">
           <div>
             <div class="app-icon">🧱</div>
@@ -340,7 +329,6 @@ footer{
           <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.blockworldblast.game" target="_blank" rel="noopener">▶ Get on Google Play</a>
         </div>
 
-        <!-- Game 2: Snake 3D: Neo Slither -->
         <div class="app-card">
           <div>
             <div class="app-icon">🐍</div>
@@ -358,6 +346,7 @@ footer{
     </section>
   </div>
 
+  <!-- Tab 3: Tools -->
   <div id="tools-tab" class="tab-content">
     <section style="margin-bottom: 40px;">
       <div class="section-head">
@@ -366,7 +355,6 @@ footer{
       </div>
       
       <div class="apps-grid">
-        <!-- Tool 1: BHIMR Universal Calculator -->
         <div class="app-card">
           <div>
             <div class="app-icon">🧮</div>
@@ -381,7 +369,6 @@ footer{
           <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.bhimcalculator.app" target="_blank" rel="noopener">▶ Get on Google Play</a>
         </div>
 
-        <!-- Expansion Placeholder Card for future tools -->
         <div class="app-card" style="border-style: dashed; background: rgba(255,255,255,0.01);">
           <div>
             <div class="app-icon">🚀</div>
@@ -397,87 +384,62 @@ footer{
     </section>
   </div>
 
+  <!-- Tab 4: HD Photos & Pinterest Wallpapers -->
   <div id="photos-tab" class="tab-content">
     <section style="margin-bottom: 40px;">
-      
-      <!-- Main Folder View -->
-      <div id="folder-view">
-        <div class="section-head">
-          <div class="eyebrow">High-Resolution Wallpapers</div>
-          <div class="section-title">Divine & Scenic HD Photo Collections</div>
-        </div>
+      <div class="section-head">
+        <div class="eyebrow">High-Resolution Wallpapers</div>
+        <div class="section-title">Divine & Scenic Pinterest Collections</div>
+      </div>
 
-        <div class="folder-grid">
-          <!-- Folder 1: Ganpati Photos -->
-          <div class="folder-card" onclick="openFolder('ganpati')">
+      <div class="folder-grid">
+        <!-- Folder 1: Ganpati Photos -->
+        <div class="folder-card">
+          <div>
             <div class="folder-icon">🌺</div>
             <div class="folder-title">Ganpati Photos</div>
-            <div class="folder-count">Tap to view HD Wallpapers Gallery →</div>
+            <p class="folder-desc">Explore 4K & HD Divine Shree Ganesha Wallpapers & Art directly on Pinterest.</p>
           </div>
+          <a class="btn btn-pinterest" href="https://www.pinterest.com/vishalmsk5/ganpati/" target="_blank" rel="noopener">
+            📌 Explore Ganpati Board →
+          </a>
+        </div>
 
-          <!-- Folder 2: Hanuman Photos -->
-          <div class="folder-card" onclick="openFolder('hanuman')">
+        <!-- Folder 2: Hanuman Photos -->
+        <div class="folder-card">
+          <div>
             <div class="folder-icon">🚩</div>
             <div class="folder-title">Hanuman Photos</div>
-            <div class="folder-count">Tap to view HD Wallpapers Gallery →</div>
+            <p class="folder-desc">Explore High-Resolution Lord Hanuman HD Wallpapers & Art directly on Pinterest.</p>
           </div>
+          <a class="btn btn-pinterest" href="https://www.pinterest.com/vishalmsk5/hanuman/" target="_blank" rel="noopener">
+            📌 Explore Hanuman Board →
+          </a>
         </div>
 
-        <!-- Notice for upcoming folders -->
-        <div style="text-align:center; margin-top:30px; color:var(--muted); font-size:14px; font-weight:600;">
-          ✨ More HD Divine & Nature photo folders are being added soon!
+        <!-- NANTAR NAVIN GOD ADD KARNYASATHI ITHE NEW CARD COPY-PASTE KARU SHAKATA -->
+        <!-- Example: Lord Shiva (Future Expansion) -->
+        <!-- 
+        <div class="folder-card">
+          <div>
+            <div class="folder-icon">🔱</div>
+            <div class="folder-title">Shiva Photos</div>
+            <p class="folder-desc">Explore 4K Divine Lord Shiva Wallpapers & Art on Pinterest.</p>
+          </div>
+          <a class="btn btn-pinterest" href="PINTEREST_BOARD_URL_HERE" target="_blank" rel="noopener">
+            📌 Explore Shiva Board →
+          </a>
         </div>
+        -->
       </div>
 
-      <!-- Gallery View 1: Ganpati -->
-      <div id="ganpati-gallery" class="gallery-wrapper">
-        <div class="gallery-header">
-          <button class="back-btn" onclick="closeFolder()">← Back to Categories</button>
-          <div style="text-align:right;">
-            <h3 class="section-title" style="font-size:22px; margin:0;">🌺 Ganpati HD Photos</h3>
-            <span style="font-size:12px; color:var(--accent-cyan);">Ultra HD Wallpapers</span>
-          </div>
-        </div>
-        <div class="photo-grid">
-          <div class="photo-card">
-            <img src="https://images.unsplash.com/photo-1630138670830-47a32d16ebfa?w=600&auto=format&fit=crop" alt="Ganpati HD Photo 1" loading="lazy">
-            <div class="photo-info">Shree Ganesha Divine HD 1</div>
-          </div>
-          <div class="photo-card">
-            <img src="https://images.unsplash.com/photo-1661845689712-421711202860?w=600&auto=format&fit=crop" alt="Ganpati HD Photo 2" loading="lazy">
-            <div class="photo-info">Shree Ganesha Divine HD 2</div>
-          </div>
-          <div class="photo-card">
-            <img src="https://images.unsplash.com/photo-1567157577867-05ccb1388e66?w=600&auto=format&fit=crop" alt="Ganpati HD Photo 3" loading="lazy">
-            <div class="photo-info">Bappa Grand Celebration HD</div>
-          </div>
-        </div>
+      <div style="text-align:center; margin-top:30px; color:var(--muted); font-size:14px; font-weight:600;">
+        ✨ More HD Divine photo boards are being added regularly on Pinterest!
       </div>
-
-      <!-- Gallery View 2: Hanuman -->
-      <div id="hanuman-gallery" class="gallery-wrapper">
-        <div class="gallery-header">
-          <button class="back-btn" onclick="closeFolder()">← Back to Categories</button>
-          <div style="text-align:right;">
-            <h3 class="section-title" style="font-size:22px; margin:0;">🚩 Hanuman HD Photos</h3>
-            <span style="font-size:12px; color:var(--accent-cyan);">Ultra HD Wallpapers</span>
-          </div>
-        </div>
-        <div class="photo-grid">
-          <div class="photo-card">
-            <img src="https://images.unsplash.com/photo-1620052581237-5d36667be337?w=600&auto=format&fit=crop" alt="Hanuman HD Photo 1" loading="lazy">
-            <div class="photo-info">Lord Hanuman Divine HD 1</div>
-          </div>
-          <div class="photo-card">
-            <img src="https://images.unsplash.com/photo-1590077428593-a55bb07c4665?w=600&auto=format&fit=crop" alt="Hanuman HD Photo 2" loading="lazy">
-            <div class="photo-info">Lord Hanuman Divine HD 2</div>
-          </div>
-        </div>
-      </div>
-
     </section>
   </div>
 
+  <!-- Privacy Policy Card -->
   <section class="privacy-card" id="privacy">
     <div class="eyebrow">Data Trust & Compliance</div>
     <div class="section-title" style="font-size:22px; margin-bottom:12px;">Global Privacy Commitment</div>
@@ -498,16 +460,13 @@ footer{
 
 <script>
   function switchTab(tabName, btn) {
-    // Hide all tabs
     document.querySelectorAll('.tab-content').forEach(tab => {
       tab.classList.remove('active');
     });
-    // Remove active state from category buttons
     document.querySelectorAll('.cat-btn').forEach(b => {
       b.classList.remove('active');
     });
 
-    // Show selected tab content
     const selectedTab = document.getElementById(tabName + '-tab');
     if(selectedTab){
       selectedTab.classList.add('active');
@@ -516,27 +475,6 @@ footer{
     if(btn){
       btn.classList.add('active');
     }
-
-    // Reset photo folder view when switching to photos tab
-    if(tabName === 'photos') {
-      closeFolder();
-    }
-  }
-
-  function openFolder(folderName) {
-    document.getElementById('folder-view').style.display = 'none';
-    document.querySelectorAll('.gallery-wrapper').forEach(g => g.style.display = 'none');
-    
-    if(folderName === 'ganpati') {
-      document.getElementById('ganpati-gallery').style.display = 'block';
-    } else if(folderName === 'hanuman') {
-      document.getElementById('hanuman-gallery').style.display = 'block';
-    }
-  }
-
-  function closeFolder() {
-    document.getElementById('folder-view').style.display = 'block';
-    document.querySelectorAll('.gallery-wrapper').forEach(g => g.style.display = 'none');
   }
 
   function switchToPhotosTab() {
