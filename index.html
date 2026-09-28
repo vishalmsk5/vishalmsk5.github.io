@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vishal Creation — Premium Apps, Interactive Games & HD Wallpapers</title>
 <meta name="description" content="Explore a curated universe of immersive games, smart utility tools, and high-resolution devotional HD wallpapers created by Vishal Creation. Free on Google Play.">
-<link rel="icon" href="data:,">
+
+<!-- Custom Favicon (✨ SVG Dynamic Favicon) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
 
 <!-- Pinterest Official JS Script -->
 <script async defer src="https://assets.pinterest.com/js/pinit.js"></script>
@@ -151,6 +153,9 @@ h1 .glow-word{
   background:rgba(255,255,255,0.05); border:1px solid var(--line);
   padding:5px 12px; border-radius:100px;
 }
+.badge-warning{
+  background:rgba(251,191,36,0.15); border-color:rgba(251,191,36,0.4); color:var(--accent-gold);
+}
 
 .btn{
   font-family:'Baloo 2', cursive; font-weight:700; font-size:15px;
@@ -163,6 +168,12 @@ h1 .glow-word{
   box-shadow:0 4px 15px rgba(59,130,246,0.3); width:100%;
 }
 .btn-primary:hover{ box-shadow:0 6px 20px rgba(168,85,247,0.4); transform:translateY(-2px); }
+
+.btn-disabled{
+  background:rgba(255,255,255,0.08); color:var(--muted); border:1px solid var(--line);
+  cursor:not-allowed; width:100%;
+}
+.btn-disabled:hover{ transform:none; box-shadow:none; }
 
 .btn-pinterest{
   background:linear-gradient(135deg, #e60023, #bd081c); color:#fff;
@@ -276,6 +287,7 @@ footer{
           <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.bhimcalculator.app" target="_blank" rel="noopener">▶ Get on Google Play</a>
         </div>
 
+        <!-- Snake 3D Game (Status: Closed Testing / Coming Soon for Public) -->
         <div class="app-card">
           <div>
             <div class="app-icon">🐍</div>
@@ -283,11 +295,11 @@ footer{
             <p class="app-desc">An immersive 3D arcade snake game with smooth controls, vibrant visuals, and exciting gameplay dynamics.</p>
             <div class="badges">
               <span class="badge">🎮 3D Arcade</span>
-              <span class="badge">🐍 Neo Slither</span>
-              <span class="badge">🆓 Free Download</span>
+              <span class="badge badge-warning">🧪 In Closed Testing</span>
             </div>
           </div>
-          <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.snake3d.neoslither" target="_blank" rel="noopener">▶ Get on Google Play</a>
+          <!-- Public launch chya nantar 'btn-primary' ani Play Store link activate kara -->
+          <button class="btn btn-disabled" onclick="alert('Snake 3D: Neo Slither is currently in closed testing track and will be released publicly soon!')">⏳ Launching Soon on Play Store</button>
         </div>
 
         <div class="app-card" style="border-color: rgba(230,0,35,0.4);">
@@ -330,6 +342,7 @@ footer{
           <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.blockworldblast.game" target="_blank" rel="noopener">▶ Get on Google Play</a>
         </div>
 
+        <!-- Snake 3D Game -->
         <div class="app-card">
           <div>
             <div class="app-icon">🐍</div>
@@ -337,11 +350,10 @@ footer{
             <p class="app-desc">An immersive 3D arcade snake game with smooth controls, vibrant visuals, and exciting gameplay dynamics.</p>
             <div class="badges">
               <span class="badge">🎮 3D Arcade</span>
-              <span class="badge">🐍 Neo Slither</span>
-              <span class="badge">🆓 Free to Play</span>
+              <span class="badge badge-warning">⏳ Coming Soon</span>
             </div>
           </div>
-          <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.snake3d.neoslither" target="_blank" rel="noopener">▶ Get on Google Play</a>
+          <button class="btn btn-disabled" onclick="alert('Snake 3D: Neo Slither is currently in closed testing track and will be released publicly soon!')">⏳ Launching Soon on Play Store</button>
         </div>
       </div>
     </section>
@@ -385,7 +397,7 @@ footer{
     </section>
   </div>
 
-  <!-- Tab 4: Embedded Pinterest Wallpapers (Ganesha HD Board Updated) -->
+  <!-- Tab 4: Embedded Pinterest Wallpapers -->
   <div id="photos-tab" class="tab-content">
     <section style="margin-bottom: 40px;">
       <div class="section-head">
