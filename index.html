@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vishal Creation — Premium Apps, Interactive Games & HD Wallpapers</title>
-<meta name="description" content="Explore a curated universe of immersive games, smart utility tools, and high-resolution devotional HD wallpapers created by Vishal Creation. Free on Google Play.">
+<meta name="description" content="Explore a curated universe of immersive games, smart utility tools, messaging apps, and high-resolution devotional HD wallpapers created by Vishal Creation. Free on Google Play.">
 
 <!-- Custom Favicon (✨ SVG Dynamic Favicon) -->
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
@@ -201,12 +201,18 @@ h1 .glow-word{
   border-radius:24px; padding:32px; border:1px solid var(--line);
   background:rgba(255,255,255,0.02); text-align:center; margin-top:20px;
 }
+.privacy-links{ margin-top:16px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+.privacy-links a{
+  color:var(--accent-cyan); text-decoration:none; font-size:13.5px; font-weight:700;
+  border:1px solid var(--line); padding:8px 18px; border-radius:100px;
+}
+.privacy-links a:hover{ border-color:var(--accent-cyan); }
 footer{
   padding:40px 0 60px; border-top:1px solid var(--line); margin-top:50px;
   display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;
 }
 .foot-brand{ font-size:14px; color:var(--muted); font-family:'Baloo 2', cursive; }
-.foot-links{ display:flex; gap:24px; }
+.foot-links{ display:flex; gap:24px; flex-wrap:wrap; }
 .foot-links a{ color:var(--muted); text-decoration:none; font-size:13.5px; font-weight:600; transition:color .2s; }
 .foot-links a:hover{ color:var(--accent-cyan); }
 
@@ -227,7 +233,7 @@ footer{
 <div class="wrap">
 
   <nav>
-    <a href="#" class="brand">
+    <a href="/" class="brand">
       <span class="tile">✨</span>
       Vishal Creation
     </a>
@@ -240,13 +246,13 @@ footer{
   <section class="hero">
     <div class="hero-badge">🌐 Global Digital Experiences</div>
     <h1>Discover Premium <span class="glow-word">Android Apps, Interactive Games</span> & HD Wallpapers.</h1>
-    <p class="lede">Explore a curated universe of immersive games, smart utility tools, and high-resolution devotional & scenic HD photography — built for millions around the globe.</p>
+    <p class="lede">Explore a curated universe of immersive games, smart utility tools, messaging apps, and high-resolution devotional & scenic HD photography — built for millions around the globe.</p>
   </section>
 
   <div class="category-nav">
     <button class="cat-btn active" onclick="switchTab('all', this)">✨ All Creation</button>
     <button class="cat-btn" onclick="switchTab('games', this)">🎮 Games</button>
-    <button class="cat-btn" onclick="switchTab('tools', this)">🛠️ Utility Tools</button>
+    <button class="cat-btn" onclick="switchTab('tools', this)">🛠️ Apps & Tools</button>
     <button class="cat-btn" onclick="switchTab('photos', this)">📸 HD Photos & Wallpapers</button>
   </div>
 
@@ -285,6 +291,22 @@ footer{
             </div>
           </div>
           <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.bhimcalculator.app" target="_blank" rel="noopener">▶ Get on Google Play</a>
+        </div>
+
+        <!-- Kasa Kay Messenger -->
+        <div class="app-card">
+          <div>
+            <div class="app-icon">💬</div>
+            <div class="app-title">Kasa Kay</div>
+            <p class="app-desc">A simple messaging app to chat with your contacts and share photos, videos and files, with optional storage and backup in your own Google Drive.</p>
+            <div class="badges">
+              <span class="badge">💬 Messenger</span>
+              <span class="badge">☁️ Google Drive Storage</span>
+              <span class="badge badge-warning">🚀 Coming Soon</span>
+            </div>
+          </div>
+          <!-- Play Store var public zalyavar 'btn-primary' ani Play Store link activate kara -->
+          <button class="btn btn-disabled" onclick="alert('Kasa Kay will be available on Google Play soon!')">⏳ Launching Soon on Play Store</button>
         </div>
 
         <!-- Snake 3D Game (Status: Closed Testing / Coming Soon for Public) -->
@@ -359,12 +381,12 @@ footer{
     </section>
   </div>
 
-  <!-- Tab 3: Tools -->
+  <!-- Tab 3: Apps & Tools -->
   <div id="tools-tab" class="tab-content">
     <section style="margin-bottom: 40px;">
       <div class="section-head">
-        <div class="eyebrow">Productivity & Utilities</div>
-        <div class="section-title">Smart Tools</div>
+        <div class="eyebrow">Productivity & Communication</div>
+        <div class="section-title">Apps & Smart Tools</div>
       </div>
       
       <div class="apps-grid">
@@ -380,6 +402,20 @@ footer{
             </div>
           </div>
           <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.bhimcalculator.app" target="_blank" rel="noopener">▶ Get on Google Play</a>
+        </div>
+
+        <div class="app-card">
+          <div>
+            <div class="app-icon">💬</div>
+            <div class="app-title">Kasa Kay</div>
+            <p class="app-desc">A simple messaging app to chat with your contacts and share photos, videos and files, with optional storage and backup in your own Google Drive.</p>
+            <div class="badges">
+              <span class="badge">💬 Messenger</span>
+              <span class="badge">☁️ Google Drive Storage</span>
+              <span class="badge badge-warning">🚀 Coming Soon</span>
+            </div>
+          </div>
+          <button class="btn btn-disabled" onclick="alert('Kasa Kay will be available on Google Play soon!')">⏳ Launching Soon on Play Store</button>
         </div>
 
         <div class="app-card" style="border-style: dashed; background: rgba(255,255,255,0.01);">
@@ -441,14 +477,19 @@ footer{
     <div class="eyebrow">Data Trust & Compliance</div>
     <div class="section-title" style="font-size:22px; margin-bottom:12px;">Global Privacy Commitment</div>
     <p style="color: var(--muted); max-width: 720px; margin: 0 auto; font-size:14px; line-height:1.7;">
-      At <strong>Vishal Creation</strong>, we prioritize user trust and privacy. None of our games, productivity tools, or HD wallpaper galleries collect, track, or share personal user data.
+      At <strong>Vishal Creation</strong>, we prioritize user trust and privacy. Our games, calculator and HD wallpaper galleries do not collect, track, or share personal user data. Our messaging app <strong>Kasa Kay</strong> handles only the information needed to deliver your chats, and its optional Google Drive feature stores files in <strong>your own</strong> Drive and can only access files created by the app. We never sell your data.
     </p>
+    <div class="privacy-links">
+      <a href="/privacy-kasa-kay.html">Kasa Kay Privacy Policy</a>
+      <a href="/terms-kasa-kay.html">Kasa Kay Terms of Service</a>
+    </div>
   </section>
     
   <footer>
     <div class="foot-brand">© 2026 Vishal Creation. Global Digital Apps & Media.</div>
     <div class="foot-links">
-      <a href="#privacy">Privacy Policy</a>
+      <a href="/privacy-kasa-kay.html">Privacy Policy</a>
+      <a href="/terms-kasa-kay.html">Terms of Service</a>
       <a href="mailto:vishalmsk5@gmail.com">Contact Developer</a>
     </div>
   </footer>
