@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vishal Creation — Premium Apps, Interactive Games & HD Wallpapers</title>
+<meta name="description" content="Explore a curated universe of immersive games, smart utility tools, messaging apps, and high-resolution devotional HD wallpapers created by Vishal Creation. Free on Google Play.">
+
+<!-- Custom Favicon (✨ SVG Dynamic Favicon) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+
+<!-- Pinterest Official JS Script -->
+<script async defer src="https://assets.pinterest.com/js/pinit.js"></script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root{
+  --bg-top:#090a12;
+  --bg-mid:#111528;
+  --bg-bot:#05060a;
+  
+  --accent-blue:#3b82f6;
+  --accent-cyan:#06b6d4;
+  --accent-violet:#a855f7;
+  --accent-gold:#fbbf24;
+  --accent-pinterest:#e60023;
+  
+  --ink:#f8fafc;
+  --muted:#94a3b8;
+  --line:rgba(255, 255, 255, 0.08);
+  --glass-bg:rgba(22, 27, 51, 0.55);
+  --glass-border:rgba(255, 255, 255, 0.12);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+
+body{
+  font-family:'Plus Jakarta Sans', sans-serif;
+  color:var(--ink);
+  background:linear-gradient(180deg, var(--bg-top) 0%, var(--bg-mid) 50%, var(--bg-bot) 100%);
+  min-height:100vh;
+  overflow-x:hidden;
+  line-height:1.6;
+}
+
+.nebula-glow{
+  position:fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden;
+}
+.glow-1{
+  position:absolute; top:-10%; left:20%; width:500px; height:500px;
+  background:radial-gradient(circle, rgba(59,130,246,0.18) 0%, rgba(0,0,0,0) 70%);
+  filter:blur(60px); animation:pulse 12s infinite alternate ease-in-out;
+}
+.glow-2{
+  position:absolute; top:40%; right:-10%; width:600px; height:600px;
+  background:radial-gradient(circle, rgba(168,85,247,0.15) 0%, rgba(0,0,0,0) 70%);
+  filter:blur(80px); animation:pulse 16s infinite alternate ease-in-out;
+}
+.glow-3{
+  position:absolute; bottom:-10%; left:-10%; width:550px; height:550px;
+  background:radial-gradient(circle, rgba(6,182,212,0.14) 0%, rgba(0,0,0,0) 70%);
+  filter:blur(70px);
+}
+
+@keyframes pulse{
+  0%{ transform:scale(1) translateY(0); opacity:0.7; }
+  100%{ transform:scale(1.2) translateY(-30px); opacity:1; }
+}
+
+.wrap{ position:relative; z-index:1; max-width:1040px; margin:0 auto; padding:0 24px; }
+
+nav{ display:flex; align-items:center; justify-content:space-between; padding:28px 0; border-bottom:1px solid var(--line); }
+.brand{ display:flex; align-items:center; gap:12px; font-family:'Baloo 2', cursive; font-weight:800; font-size:22px; color:#fff; text-decoration:none; }
+.brand .tile{
+  width:36px; height:36px; border-radius:10px;
+  background:linear-gradient(135deg, var(--accent-cyan), var(--accent-blue), var(--accent-violet));
+  box-shadow:0 0 16px rgba(59,130,246,0.4);
+  display:flex; align-items:center; justify-content:center; font-size:18px;
+}
+.nav-links{ display:flex; gap:12px; }
+nav a.nav-link{
+  color:var(--muted); text-decoration:none; font-size:14px; font-weight:600;
+  border:1px solid var(--line); padding:8px 18px; border-radius:100px;
+  background:rgba(255,255,255,0.02);
+  transition:all .25s ease;
+}
+nav a.nav-link:hover{ border-color:var(--accent-cyan); color:#fff; box-shadow:0 0 12px rgba(6,182,212,0.25); }
+
+.hero{ padding:54px 0 36px; text-align:center; }
+.hero-badge{
+  display:inline-flex; align-items:center; gap:8px;
+  padding:6px 16px; border-radius:100px; font-size:12px; font-weight:700;
+  letter-spacing:1px; text-transform:uppercase;
+  background:rgba(59,130,246,0.1); border:1px solid rgba(59,130,246,0.3);
+  color:var(--accent-cyan); margin-bottom:20px;
+}
+h1{
+  font-family:'Baloo 2', cursive; font-weight:800; letter-spacing:-0.5px;
+  font-size:clamp(32px, 5.5vw, 54px); line-height:1.15; margin-bottom:18px;
+}
+h1 .glow-word{
+  background:linear-gradient(120deg, var(--accent-cyan), var(--accent-blue), var(--accent-violet));
+  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
+  filter:drop-shadow(0 0 25px rgba(59,130,246,0.3));
+}
+.lede{ font-size:16px; color:var(--muted); max-width:680px; margin:0 auto 32px; font-weight:400; line-height:1.7; }
+
+.category-nav{
+  display:flex; justify-content:center; gap:12px; flex-wrap:wrap; margin-bottom:36px;
+}
+.cat-btn{
+  font-family:'Baloo 2', cursive; font-size:16px; font-weight:700;
+  padding:10px 24px; border-radius:100px; border:1px solid var(--glass-border);
+  background:var(--glass-bg); color:var(--muted); cursor:pointer;
+  backdrop-filter:blur(10px); transition:all 0.25s ease; display:flex; align-items:center; gap:8px;
+}
+.cat-btn:hover{ border-color:var(--accent-blue); color:#fff; transform:translateY(-2px); }
+.cat-btn.active{
+  background:linear-gradient(135deg, var(--accent-blue), var(--accent-violet));
+  color:#fff; border-color:transparent;
+  box-shadow:0 6px 20px rgba(168,85,247,0.35);
+}
+
+.tab-content{ display:none; }
+.tab-content.active{ display:block; animation:fadeIn 0.35s ease-out; }
+
+@keyframes fadeIn{ from{opacity:0; transform:translateY(12px);} to{opacity:1; transform:translateY(0);} }
+
+.section-head{ text-align:center; margin-bottom:32px; }
+.eyebrow{
+  font-size:12px; letter-spacing:2px; text-transform:uppercase; font-weight:700;
+  color:var(--accent-cyan); margin-bottom:6px;
+}
+.section-title{ font-family:'Baloo 2', cursive; font-size:28px; font-weight:700; color:#fff; }
+
+.apps-grid{ display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+.app-card{
+  border-radius:24px; padding:28px; border:1px solid var(--glass-border);
+  background:var(--glass-bg); backdrop-filter:blur(12px);
+  display:flex; flex-direction:column; justify-content:space-between;
+  transition:all .25s ease; box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+.app-card:hover{ transform:translateY(-6px); border-color:rgba(59,130,246,0.5); box-shadow:0 15px 35px rgba(59,130,246,0.15); }
+.app-icon{ font-size:44px; margin-bottom:16px; filter:drop-shadow(0 4px 8px rgba(0,0,0,0.5)); }
+.app-title{ font-family:'Baloo 2', cursive; font-weight:700; font-size:24px; margin-bottom:8px; color:#fff; }
+.app-desc{ font-size:14px; color:var(--muted); margin-bottom:22px; line-height:1.6; }
+
+.badges{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:22px; }
+.badge{
+  font-size:11.5px; font-weight:700; color:var(--ink);
+  background:rgba(255,255,255,0.05); border:1px solid var(--line);
+  padding:5px 12px; border-radius:100px;
+}
+.badge-warning{
+  background:rgba(251,191,36,0.15); border-color:rgba(251,191,36,0.4); color:var(--accent-gold);
+}
+
+.btn{
+  font-family:'Baloo 2', cursive; font-weight:700; font-size:15px;
+  padding:12px 22px; border-radius:14px; text-decoration:none; letter-spacing:.3px;
+  display:inline-flex; align-items:center; justify-content:center; gap:8px; transition:all .2s ease;
+  cursor:pointer; border:none;
+}
+.btn-primary{
+  background:linear-gradient(135deg, var(--accent-blue), var(--accent-violet)); color:#fff;
+  box-shadow:0 4px 15px rgba(59,130,246,0.3); width:100%;
+}
+.btn-primary:hover{ box-shadow:0 6px 20px rgba(168,85,247,0.4); transform:translateY(-2px); }
+
+.btn-disabled{
+  background:rgba(255,255,255,0.08); color:var(--muted); border:1px solid var(--line);
+  cursor:not-allowed; width:100%;
+}
+.btn-disabled:hover{ transform:none; box-shadow:none; }
+
+.btn-pinterest{
+  background:linear-gradient(135deg, #e60023, #bd081c); color:#fff;
+  box-shadow:0 4px 15px rgba(230,0,35,0.3); width:100%;
+}
+.btn-pinterest:hover{ box-shadow:0 6px 20px rgba(230,0,35,0.5); transform:translateY(-2px); }
+
+/* Embedded Pinterest Board Styling */
+.pinterest-embed-grid {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.pinterest-card {
+  border-radius: 20px;
+  padding: 16px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(12px);
+  text-align: center;
+}
+
+.privacy-card{
+  border-radius:24px; padding:32px; border:1px solid var(--line);
+  background:rgba(255,255,255,0.02); text-align:center; margin-top:20px;
+}
+.privacy-links{ margin-top:16px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+.privacy-links a{
+  color:var(--accent-cyan); text-decoration:none; font-size:13.5px; font-weight:700;
+  border:1px solid var(--line); padding:8px 18px; border-radius:100px;
+}
+.privacy-links a:hover{ border-color:var(--accent-cyan); }
+footer{
+  padding:40px 0 60px; border-top:1px solid var(--line); margin-top:50px;
+  display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;
+}
+.foot-brand{ font-size:14px; color:var(--muted); font-family:'Baloo 2', cursive; }
+.foot-links{ display:flex; gap:24px; flex-wrap:wrap; }
+.foot-links a{ color:var(--muted); text-decoration:none; font-size:13.5px; font-weight:600; transition:color .2s; }
+.foot-links a:hover{ color:var(--accent-cyan); }
+
+@media (max-width:768px){
+  .apps-grid{ grid-template-columns:1fr; }
+  nav{ flex-direction:column; gap:16px; text-align:center; }
+}
+</style>
+</head>
+<body>
+
+<div class="nebula-glow">
+  <div class="glow-1"></div>
+  <div class="glow-2"></div>
+  <div class="glow-3"></div>
+</div>
+
+<div class="wrap">
+
+  <nav>
+    <a href="/" class="brand">
+      <span class="tile">✨</span>
+      Vishal Creation
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" href="#privacy">Privacy & Security</a>
+      <a class="nav-link" href="mailto:vishalmsk5@gmail.com">Contact Developer</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-badge">🌐 Global Digital Experiences</div>
+    <h1>Discover Premium <span class="glow-word">Android Apps, Interactive Games</span> & HD Wallpapers.</h1>
+    <p class="lede">Explore a curated universe of immersive games, smart utility tools, messaging apps, and high-resolution devotional & scenic HD photography — built for millions around the globe.</p>
+  </section>
+
+  <div class="category-nav">
+    <button class="cat-btn active" onclick="switchTab('all', this)">✨ All Creation</button>
+    <button class="cat-btn" onclick="switchTab('games', this)">🎮 Games</button>
+    <button class="cat-btn" onclick="switchTab('tools', this)">🛠️ Apps & Tools</button>
+    <button class="cat-btn" onclick="switchTab('photos', this)">📸 HD Photos & Wallpapers</button>
+  </div>
+
+  <!-- Tab 1: All Creation -->
+  <div id="all-tab" class="tab-content active">
+    <section style="margin-bottom: 40px;">
+      <div class="section-head">
+        <div class="eyebrow">Featured Global Releases</div>
+        <div class="section-title">Explore Our Full Ecosystem</div>
+      </div>
+
+      <div class="apps-grid">
+        <div class="app-card">
+          <div>
+            <div class="app-icon">🧱</div>
+            <div class="app-title">Block World Blast</div>
+            <p class="app-desc">A fast, juicy block-matching puzzle game. Tap connected blocks, chain combos, and dodge dangers across 50+ levels.</p>
+            <div class="badges">
+              <span class="badge">🎮 Arcade Puzzle</span>
+              <span class="badge">🌴 5 Worlds</span>
+              <span class="badge">🆓 Free Download</span>
+            </div>
+          </div>
+          <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.blockworldblast.game" target="_blank" rel="noopener">▶ Get on Google Play</a>
+        </div>
+
+        <div class="app-card">
+          <div>
+            <div class="app-icon">🧮</div>
+            <div class="app-title">BHIMR Universal Calculator</div>
+            <p class="app-desc">A powerful, all-in-one smart calculator designed for daily math, advanced calculations, and quick conversions with a smooth interface.</p>
+            <div class="badges">
+              <span class="badge">🛠️ Smart Utility</span>
+              <span class="badge">⚡ High Precision</span>
+              <span class="badge">🆓 Free to Use</span>
+            </div>
+          </div>
+          <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.bhimcalculator.app" target="_blank" rel="noopener">▶ Get on Google Play</a>
+        </div>
+
+        <!-- Kasa Kay Messenger -->
+        <div class="app-card">
+          <div>
+            <div class="app-icon">💬</div>
+            <div class="app-title">Kasa Kay</div>
+            <p class="app-desc">A simple messaging app to chat with your contacts and share photos, videos and files, with optional storage and backup in your own Google Drive.</p>
+            <div class="badges">
+              <span class="badge">💬 Messenger</span>
+              <span class="badge">☁️ Google Drive Storage</span>
+              <span class="badge badge-warning">🚀 Coming Soon</span>
+            </div>
+          </div>
+          <!-- Play Store var public zalyavar 'btn-primary' ani Play Store link activate kara -->
+          <button class="btn btn-disabled" onclick="alert('Kasa Kay will be available on Google Play soon!')">⏳ Launching Soon on Play Store</button>
+        </div>
+
+        <!-- Snake 3D Game (Status: Closed Testing / Coming Soon for Public) -->
+        <div class="app-card">
+          <div>
+            <div class="app-icon">🐍</div>
+            <div class="app-title">Snake 3D: Neo Slither</div>
+            <p class="app-desc">An immersive 3D arcade snake game with smooth controls, vibrant visuals, and exciting gameplay dynamics.</p>
+            <div class="badges">
+              <span class="badge">🎮 3D Arcade</span>
+              <span class="badge badge-warning">🧪 In Closed Testing</span>
+            </div>
+          </div>
+          <!-- Public launch chya nantar 'btn-primary' ani Play Store link activate kara -->
+          <button class="btn btn-disabled" onclick="alert('Snake 3D: Neo Slither is currently in closed testing track and will be released publicly soon!')">⏳ Launching Soon on Play Store</button>
+        </div>
+
+        <div class="app-card" style="border-color: rgba(230,0,35,0.4);">
+          <div>
+            <div class="app-icon">🖼️</div>
+            <div class="app-title">Live HD Wallpapers</div>
+            <p class="app-desc">Explore 3D Gold Lord Ganesha & Devotional 4K Photo galleries embedded directly from Pinterest.</p>
+            <div class="badges">
+              <span class="badge">📌 Live Pinterest Board</span>
+              <span class="badge">🌺 Lord Ganesha HD</span>
+              <span class="badge">✨ Embedded Gallery</span>
+            </div>
+          </div>
+          <button class="btn btn-pinterest" onclick="switchToPhotosTab()">📷 View Photo Gallery →</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Tab 2: Games -->
+  <div id="games-tab" class="tab-content">
+    <section style="margin-bottom: 40px;">
+      <div class="section-head">
+        <div class="eyebrow">Interactive Gaming Hub</div>
+        <div class="section-title">Android Games</div>
+      </div>
+      
+      <div class="apps-grid">
+        <div class="app-card">
+          <div>
+            <div class="app-icon">🧱</div>
+            <div class="app-title">Block World Blast</div>
+            <p class="app-desc">A fast, juicy block-matching puzzle game. Tap connected blocks, chain combos, and dodge dangers across 50+ levels.</p>
+            <div class="badges">
+              <span class="badge">🌴 5 Worlds</span>
+              <span class="badge">🎯 Daily Challenge</span>
+              <span class="badge">🆓 Free to Play</span>
+            </div>
+          </div>
+          <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.blockworldblast.game" target="_blank" rel="noopener">▶ Get on Google Play</a>
+        </div>
+
+        <!-- Snake 3D Game -->
+        <div class="app-card">
+          <div>
+            <div class="app-icon">🐍</div>
+            <div class="app-title">Snake 3D: Neo Slither</div>
+            <p class="app-desc">An immersive 3D arcade snake game with smooth controls, vibrant visuals, and exciting gameplay dynamics.</p>
+            <div class="badges">
+              <span class="badge">🎮 3D Arcade</span>
+              <span class="badge badge-warning">⏳ Coming Soon</span>
+            </div>
+          </div>
+          <button class="btn btn-disabled" onclick="alert('Snake 3D: Neo Slither is currently in closed testing track and will be released publicly soon!')">⏳ Launching Soon on Play Store</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Tab 3: Apps & Tools -->
+  <div id="tools-tab" class="tab-content">
+    <section style="margin-bottom: 40px;">
+      <div class="section-head">
+        <div class="eyebrow">Productivity & Communication</div>
+        <div class="section-title">Apps & Smart Tools</div>
+      </div>
+      
+      <div class="apps-grid">
+        <div class="app-card">
+          <div>
+            <div class="app-icon">🧮</div>
+            <div class="app-title">BHIMR Universal Calculator</div>
+            <p class="app-desc">A powerful, all-in-one smart calculator designed for daily math, advanced calculations, and quick conversions with a smooth and clean user interface.</p>
+            <div class="badges">
+              <span class="badge">🔢 Smart Math</span>
+              <span class="badge">⚡ Fast & Accurate</span>
+              <span class="badge">🆓 Free Utility</span>
+            </div>
+          </div>
+          <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.bhimcalculator.app" target="_blank" rel="noopener">▶ Get on Google Play</a>
+        </div>
+
+        <div class="app-card">
+          <div>
+            <div class="app-icon">💬</div>
+            <div class="app-title">Kasa Kay</div>
+            <p class="app-desc">A simple messaging app to chat with your contacts and share photos, videos and files, with optional storage and backup in your own Google Drive.</p>
+            <div class="badges">
+              <span class="badge">💬 Messenger</span>
+              <span class="badge">☁️ Google Drive Storage</span>
+              <span class="badge badge-warning">🚀 Coming Soon</span>
+            </div>
+          </div>
+          <button class="btn btn-disabled" onclick="alert('Kasa Kay will be available on Google Play soon!')">⏳ Launching Soon on Play Store</button>
+        </div>
+
+        <div class="app-card" style="border-style: dashed; background: rgba(255,255,255,0.01);">
+          <div>
+            <div class="app-icon">🚀</div>
+            <div class="app-title">More Tools Coming Soon</div>
+            <p class="app-desc">We are actively developing new utility applications and smart everyday productivity tools for global Android users.</p>
+            <div class="badges">
+              <span class="badge">⚙️ In Development</span>
+              <span class="badge">🌟 Stay Tuned</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Tab 4: Embedded Pinterest Wallpapers -->
+  <div id="photos-tab" class="tab-content">
+    <section style="margin-bottom: 40px;">
+      <div class="section-head">
+        <div class="eyebrow">Embedded Galleries</div>
+        <div class="section-title">Live Lord Ganesha & Devotional Wallpapers</div>
+      </div>
+
+      <div class="pinterest-embed-grid">
+        
+        <!-- Embedded Board 1: Lord Ganesha HD Wallpapers -->
+        <div class="pinterest-card">
+          <h3 style="font-family:'Baloo 2', cursive; margin-bottom:12px; color:#fff;">🌺 Lord Ganesha HD Wallpapers</h3>
+          <a data-pin-do="embedBoard" 
+             data-pin-board-width="380" 
+             data-pin-scale-height="400" 
+             data-pin-scale-width="120" 
+             href="https://www.pinterest.com/vishalmsk5/lord-ganesha-hd-wallpapers/">
+          </a>
+        </div>
+
+        <!-- Embedded Board 2: Hanuman HD Photos -->
+        <div class="pinterest-card">
+          <h3 style="font-family:'Baloo 2', cursive; margin-bottom:12px; color:#fff;">🚩 Hanuman HD Photos</h3>
+          <a data-pin-do="embedBoard" 
+             data-pin-board-width="380" 
+             data-pin-scale-height="400" 
+             data-pin-scale-width="120" 
+             href="https://www.pinterest.com/vishalmsk5/hanuman/">
+          </a>
+        </div>
+
+      </div>
+
+      <div style="text-align:center; margin-top:30px; color:var(--muted); font-size:14px; font-weight:600;">
+        ✨ HD Divine Wallpapers loaded dynamically straight from Pinterest!
+      </div>
+    </section>
+  </div>
+
+  <section class="privacy-card" id="privacy">
+    <div class="eyebrow">Data Trust & Compliance</div>
+    <div class="section-title" style="font-size:22px; margin-bottom:12px;">Global Privacy Commitment</div>
+    <p style="color: var(--muted); max-width: 720px; margin: 0 auto; font-size:14px; line-height:1.7;">
+      At <strong>Vishal Creation</strong>, we prioritize user trust and privacy. Our games, calculator and HD wallpaper galleries do not collect, track, or share personal user data. Our messaging app <strong>Kasa Kay</strong> handles only the information needed to deliver your chats, and its optional Google Drive feature stores files in <strong>your own</strong> Drive and can only access files created by the app. We never sell your data.
+    </p>
+    <div class="privacy-links">
+      <a href="/privacy-kasa-kay.html">Kasa Kay Privacy Policy</a>
+      <a href="/terms-kasa-kay.html">Kasa Kay Terms of Service</a>
+    </div>
+  </section>
+    
+  <footer>
+    <div class="foot-brand">© 2026 Vishal Creation. Global Digital Apps & Media.</div>
+    <div class="foot-links">
+      <a href="/privacy-kasa-kay.html">Privacy Policy</a>
+      <a href="/terms-kasa-kay.html">Terms of Service</a>
+      <a href="mailto:vishalmsk5@gmail.com">Contact Developer</a>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+  function switchTab(tabName, btn) {
+    document.querySelectorAll('.tab-content').forEach(tab => {
+      tab.classList.remove('active');
+    });
+    document.querySelectorAll('.cat-btn').forEach(b => {
+      b.classList.remove('active');
+    });
+
+    const selectedTab = document.getElementById(tabName + '-tab');
+    if(selectedTab){
+      selectedTab.classList.add('active');
+    }
+    
+    if(btn){
+      btn.classList.add('active');
+    }
+  }
+
+  function switchToPhotosTab() {
+    const photoBtn = document.querySelectorAll('.cat-btn')[3];
+    switchTab('photos', photoBtn);
+  }
+</script>
+
+</body>
+</html>
