@@ -1,15 +1,25 @@
-# Upload to vishalmsk5/vishalmsk5.github.io
+# Restore the main site and add a product page
 
-Upload the smart-work-manager folder to the repository root on the branch used by GitHub Pages. Keep its three files together. Do not replace the existing root index.html, CNAME, policies or verification files.
+This corrected package contains TWO levels. Upload ALL of its contents to the repository root, preserving folders:
 
-Expected public URLs after GitHub Pages deployment:
-- https://vishalcreation.online/smart-work-manager/
-- https://vishalcreation.online/smart-work-manager/privacy-policy.html
+index.html (restores your original Vishal Creation homepage with the new product card)
+smart-work-manager/index.html (separate product details page)
+smart-work-manager/privacy-policy.html
+smart-work-manager/styles.css
+smart-work-manager/product-config.js
+smart-work-manager/product-page.js
 
-Add a link from the existing site home page to /smart-work-manager/ for discovery.
+Do not upload only the files INSIDE smart-work-manager at the repository root. That would replace the main homepage with the product page. Keep the existing CNAME, other policies, app-ads.txt and Google verification file unchanged. This package does not include or replace those files.
 
-Google Branding: app name Smart Work Manager; support email vishalmsk5@gmail.com; homepage and privacy URLs above; authorised domain vishalcreation.online (no scheme/path). Verify domain ownership with the Google account associated with your Cloud project. Only enter URLs once both pages load publicly without sign-in.
+The original homepage is recovered from the HTML you supplied. Existing cards, tabs, Play Store links and Pinterest embeds are retained. Smart Work Manager appears in All Creation and Apps & Tools, and opens /smart-work-manager/.
 
-Before submission, confirm that the policy matches the deployed app and its enabled integrations. Google keyword access is pending; this package does not enable OAuth, Google Ads API approval or live research. Review the policy when adding OAuth refresh-token storage or changing provider/retention practices.
+The Smart Work Manager package identifier is taken from your app.json. Its public Play Store listing is NOT verified. The button defaults to Coming soon. Once published, check its URL in product-config.js and set playStorePublished to true. Never mark an unpublished app as available.
 
-The files contain no credentials, external scripts, trackers or dependencies. This package has been prepared locally; it has not been pushed to GitHub or published.
+Google Branding URLs after deployment:
+Homepage: https://vishalcreation.online/smart-work-manager/
+Privacy: https://vishalcreation.online/smart-work-manager/privacy-policy.html
+Authorised domain: vishalcreation.online
+
+Future product template: copy the smart-work-manager folder under a NEW product slug; update all product text, canonical URLs, privacy disclosures, package URL and availability flag. Add a card in the homepage All Creation and appropriate category grid linking to that new folder. Copying a template does not automatically create a new product or a suitable privacy policy. Review disclosures for its actual data practices.
+
+Prepared locally. Not pushed or published. After upload test root homepage, all category tabs, existing store buttons, new product details and privacy links.
